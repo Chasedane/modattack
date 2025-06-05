@@ -2,7 +2,7 @@
 
 ## Modlist
 
-### Includet
+### Included
 - Mouse Tweaks
 - Xaeros Minimap
 - Xaeros Worldmap
