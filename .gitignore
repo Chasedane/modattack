@@ -7,5 +7,9 @@ options.txt
 servers.dat
 /shaderpacks
 /xaero
+/screenshots
+usercache.json
+usernamecache.json
+/schematics
 
 
