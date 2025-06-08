@@ -1,13 +1,37 @@
 ServerEvents.recipes(event => {
-    event.remove({ output: 'farmersdelight:cake_slice' });
+    //dirt recipe
     event.custom({
         type: 'farmersdelight:cutting',
         ingredients: [
-            { item: 'minecraft:cake', count: 2}
+            { item: 'thermal:compost' },
         ],
-        tool: { tag: 'forge:tools/knives' },
+        tool: { tag: 'forge:tools/shovels' },
         result: [
-            { item: 'farmersdelight:cake_slice', count: 5 }
+            { item: 'minecraft:dirt', count: 1 }
+        ]
+    });
+
+    //gravel recipe
+    event.custom({
+        type: 'farmersdelight:cutting',
+        ingredients: [
+            { item: 'minecraft:cobblestone' },
+        ],
+        tool: { tag: 'forge:tools/hammer' },
+        result: [
+            { item: 'minecraft:gravel', count: 1 }
+        ]
+    });
+
+    //sand recipe
+    event.custom({
+        type: 'farmersdelight:cutting',
+        ingredients: [
+            { item: 'minecraft:gravel' },
+        ],
+        tool: { tag: 'forge:tools/hammer' },
+        result: [
+            { item: 'minecraft:sand', count: 1 }
         ]
     });
 })
