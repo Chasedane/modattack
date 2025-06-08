@@ -11,5 +11,14 @@ servers.dat
 usercache.json
 usernamecache.json
 /schematics
+XaeroWaypoints_BACKUP*
+rhino.local.properties
+/local
 
 
+
+
+
+
+#Macos :)
+.DS_Store
