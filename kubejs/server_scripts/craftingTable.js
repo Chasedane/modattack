@@ -20,6 +20,7 @@ event.shaped('thermal:compost',[
 });
 
 //cobble recipe
+
 event.shaped('minecraft:cobblestone', [
     'AA',
     'AA'
@@ -29,5 +30,6 @@ event.shaped('minecraft:cobblestone', [
 //iron Ore reciepe
 event.shapeless('minecraft:raw_iron', [
     '9x kubejs:iron_ore_chunk'
+
 ])
 })
