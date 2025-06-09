@@ -34,4 +34,15 @@ ServerEvents.recipes(event => {
             { item: 'minecraft:sand', count: 1 }
         ]
     });
+
+    event.custom({
+        type: 'farmersdelight:cutting',
+        ingredients: [
+            { item: 'minecraft:sand' },
+        ],
+        tool: { tag: 'forge:tools/hammer' },
+        result: [
+            { item: 'kubejs:dust', count: 1 }
+        ]
+    });
 })
