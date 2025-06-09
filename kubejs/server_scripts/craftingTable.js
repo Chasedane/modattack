@@ -20,7 +20,14 @@ event.shaped('thermal:compost',[
 });
 
 //cobble recipe
-event.shapeless('minecraft:cobblestone', [
-    '9x kubejs:stone_pebble'
+event.shaped('minecraft:cobblestone', [
+    'AA',
+    'AA'
+], { A: 'kubejs:stone_pebble' 
+});
+
+//iron Ore reciepe
+event.shapeless('minecraft:raw_iron', [
+    '9x kubejs:iron_ore_chunk'
 ])
 })
