@@ -1,4 +1,15 @@
 {
+  "ae2:charger": null,
+  "ae2:crafting_monitor": null,
+  "ae2:debug": null,
+  "ae2:grid_node_state": null,
+  "ae2:part_icon": null,
+  "ae2:part_mod_name": null,
+  "ae2:part_name": null,
+  "ae2:part_tooltip": null,
+  "ae2:pattern_provider": null,
+  "ae2:power_storage": null,
+  "ae2:server_data": null,
   "gravestone:grave": null,
   "jade:block_face": null,
   "jade:distance": null,
@@ -17,6 +28,7 @@
   "jadeaddons.create:placard": null,
   "jadeaddons.create:table_cloth": null,
   "jadeaddons.lootr:inventory": null,
+  "jadeaddons.mcjtylib:jadeaddons": null,
   "jadeaddons.tconstruct:casting_table": null,
   "jadeaddons.tconstruct:duct_fluid": null,
   "jadeaddons.tconstruct:duct_item": null,
@@ -66,5 +78,10 @@
   "minecraft:total_enchantment_power": null,
   "minecraft:villager_profession": null,
   "minecraft:waxed": null,
-  "minecraft:zombie_villager": null
+  "minecraft:zombie_villager": null,
+  "mysticalagradditions:infused_farmland": null,
+  "mysticalagriculture:crop": null,
+  "mysticalagriculture:inferium_crop": null,
+  "mysticalagriculture:infused_farmland": null,
+  "storagedrawers:main": null
 }
