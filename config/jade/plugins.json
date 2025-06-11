@@ -64,6 +64,9 @@
     "goggles.detailed": false,
     "placard": true
   },
+  "jadeaddons.mcjtylib": {
+    "jadeaddons": true
+  },
   "mekanismcardboardtooltip": {
     "cardboard_box": true
   },
@@ -80,6 +83,9 @@
   "mekanismcovers": {
     "cover_component": true
   },
+  "mysticalagradditions": {
+    "infused_farmland": true
+  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -90,5 +96,10 @@
   },
   "gravestone": {
     "grave": true
+  },
+  "mysticalagriculture": {
+    "infused_farmland": true,
+    "crop": true,
+    "inferium_crop": true
   }
 }

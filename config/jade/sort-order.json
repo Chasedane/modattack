@@ -17,6 +17,7 @@
   "jadeaddons.create:placard": null,
   "jadeaddons.create:table_cloth": null,
   "jadeaddons.lootr:inventory": null,
+  "jadeaddons.mcjtylib:jadeaddons": null,
   "jadeaddons.tconstruct:casting_table": null,
   "jadeaddons.tconstruct:duct_fluid": null,
   "jadeaddons.tconstruct:duct_item": null,
@@ -66,5 +67,9 @@
   "minecraft:total_enchantment_power": null,
   "minecraft:villager_profession": null,
   "minecraft:waxed": null,
-  "minecraft:zombie_villager": null
+  "minecraft:zombie_villager": null,
+  "mysticalagradditions:infused_farmland": null,
+  "mysticalagriculture:crop": null,
+  "mysticalagriculture:inferium_crop": null,
+  "mysticalagriculture:infused_farmland": null
 }
