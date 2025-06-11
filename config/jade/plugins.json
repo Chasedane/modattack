@@ -51,9 +51,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "jadeaddons": {
-    "equipment_requirement": ""
-  },
   "jadeaddons.create": {
     "filter": true,
     "backtank_capacity": true,
@@ -70,6 +67,32 @@
   "mekanismcardboardtooltip": {
     "cardboard_box": true
   },
+  "mekanismcovers": {
+    "cover_component": true
+  },
+  "jade": {
+    "coordinates.rel": false,
+    "distance": false,
+    "block_face": false,
+    "coordinates": false,
+    "registry_name": "OFF",
+    "mod_name": true
+  },
+  "ae2": {
+    "part_icon": true,
+    "charger": true,
+    "debug": true,
+    "part_tooltip": true,
+    "grid_node_state": true,
+    "pattern_provider": true,
+    "part_mod_name": true,
+    "power_storage": true,
+    "crafting_monitor": true,
+    "part_name": true
+  },
+  "jadeaddons": {
+    "equipment_requirement": ""
+  },
   "mekanism": {
     "infuse_type": true,
     "gas": true,
@@ -80,19 +103,8 @@
     "energy": true,
     "tooltip_renderer": true
   },
-  "mekanismcovers": {
-    "cover_component": true
-  },
   "mysticalagradditions": {
     "infused_farmland": true
-  },
-  "jade": {
-    "coordinates.rel": false,
-    "distance": false,
-    "block_face": false,
-    "coordinates": false,
-    "registry_name": "OFF",
-    "mod_name": true
   },
   "gravestone": {
     "grave": true
@@ -101,5 +113,11 @@
     "infused_farmland": true,
     "crop": true,
     "inferium_crop": true
+  },
+  "storagedrawers": {
+    "display.stacklimit": true,
+    "main": true,
+    "display.content": true,
+    "display.status": true
   }
 }
