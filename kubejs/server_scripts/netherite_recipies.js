@@ -25,10 +25,10 @@ event.recipes.create.compacting('kubejs:netherrite_chunk', Item.of('tconstruct:d
 
 event.recipes.create.sequenced_assembly([
 		Item.of('minecraft:netherite_scrap') 	], 
-        'kubejs:netherrite_chunk', [
+        'kubejs:netherite_chunk', [
 
-		event.recipes.createPressing('kubejs:netherrite_chunk', 'kubejs:netherrite_chunk'),
-		event.recipes.createDeploying('kubejs:netherrite_chunk', ['kubejs:netherrite_chunk', 'kubejs:scrap_mold']).keepHeldItem(),
-		event.recipes.createPressing('kubejs:netherrite_chunk', 'kubejs:netherrite_chunk')
-	]).transitionalItem('kubejs:netherrite_chunk').loops(3) 
+		event.recipes.createPressing('kubejs:netherite_chunk', 'kubejs:netherite_chunk'),
+		event.recipes.createDeploying('kubejs:netherite_chunk', ['kubejs:netherite_chunk', 'kubejs:scrap_mold']).keepHeldItem(),
+		event.recipes.createPressing('kubejs:netherite_chunk', 'kubejs:netherite_chunk')
+	]).transitionalItem('kubejs:netherite_chunk').loops(3) 
 })

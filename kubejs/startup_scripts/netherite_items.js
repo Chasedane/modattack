@@ -16,9 +16,9 @@ StartupEvents.registry('item', event => {
         .displayName('Tiny Nugget Cast')
         .tag('forge:tiny_nugget_cast')
 
-    event.create('netherrite_chunk')
-        .displayName('Netherrite Chunk')
-        .tag('forge:netherrite_chunk')
+    event.create('netherite_chunk')
+        .displayName('Netherite Chunk')
+        .tag('forge:netherite_chunk')
 
     event.create('scrap_sand_mold')
         .displayName('Scrap Sand Mold')
