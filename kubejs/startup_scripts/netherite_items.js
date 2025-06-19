@@ -24,6 +24,10 @@ StartupEvents.registry('item', event => {
         .displayName('Scrap Sand Mold')
         .tag('forge:scrap_sand_mold')
 
+     event.create('scrap_sand_mold_full')
+        .displayName('Scrap Sand Mold')
+        .tag('forge:scrap_sand_mold_full')
+
     event.create('dummy_scrap')
         .displayName('Dummy Scrap')
         .tag('forge:dummy_scrap')
@@ -32,5 +36,12 @@ StartupEvents.registry('item', event => {
         .displayName('Scrap Mold')
         .tag('forge:scrap_mold')
 
-    
+    event.create('scrap_mold_full')
+        .displayName('Scrap Mold')
+        .tag('forge:scrap_mold_full')
+
+    event.create('debris_scrap')
+        .displayName('Debris Scrap')
+        .tag('forge:debris_scrap')
+
 })
