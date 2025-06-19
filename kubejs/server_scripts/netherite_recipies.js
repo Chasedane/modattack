@@ -62,4 +62,7 @@ event.recipes.create.compacting('minecraft:netherrack', Item.of('kubejs:netherra
 
 
 event.recipes.create.mixing('thermal:electrum_dust', 'kubejs:silver_gold_blend')
+
+
+event.remove({ id: 'tconstruct:common/flint' })
 })
