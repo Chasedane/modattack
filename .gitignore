@@ -22,3 +22,27 @@ rhino.local.properties
 
 #Macos :)
 .DS_Store
+
+
+#ServerSide
+/world
+/logs
+/.cache
+/defaultconfigs
+/libraries
+eula.txt
+banned-ips.json
+banned-players.json
+.forge-manifest.json
+usercache.json
+.rcon-cli.yaml
+server.properties
+run.bat
+user_jvm_args.txt
+index.html
+ops.json
+.run-forge.env
+usernamecache.json
+.rcon-cli.env
+run.sh
+whitelist.json
