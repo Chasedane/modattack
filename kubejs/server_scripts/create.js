@@ -10,4 +10,9 @@ ServerEvents.recipes(event => {
 
 
     event.recipes.create.splashing([Item.of('minecraft:clay').withChance(0.03), Item.of('minecraft:kelp').withChance(0.12)], 'minecraft:mud');
+
+    event.remove({id:'create:crushing/netherrack'});
+    event.recipes.create.crushing(['create:cinder_flour', Item.of('create:cinder_flour').withChance(0.5)], 'kubejs:crushed_netherrack');
+
+    event.recipes.create.milling('create:cinder_flour', 'kubejs:netherrack_dust');
 })
