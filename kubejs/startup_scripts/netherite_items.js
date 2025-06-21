@@ -41,7 +41,7 @@ StartupEvents.registry('item', event => {
         .tag('forge:scrap_mold_full')
 
     event.create('debris_scrap')
-        .displayName('Debris Scrap')
+        .displayName('Raw Netherite Scrap')
         .tag('forge:debris_scrap')
 
 })

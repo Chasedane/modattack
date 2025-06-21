@@ -49,7 +49,7 @@ event.recipes.create.sequenced_assembly([
 event.recipes.create.filling('kubejs:scrap_mold', ['kubejs:dummy_scrap', Fluid.of('tconstruct:molten_iron', 200)])
 
 
-event.recipes.create.mixing('netherite_scrap', ['kubejs:debris_scrap', 'thermal:gold_dust'])
+event.recipes.create.mixing('netherite_scrap', ['kubejs:debris_scrap', '#forge:dusts/gold'])
     .heated()
 
 event.recipes.create.milling('thermal:silver_dust', 'thermal:silver_ingot')
