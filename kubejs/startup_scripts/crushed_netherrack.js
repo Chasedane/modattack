@@ -6,6 +6,5 @@ StartupEvents.registry('block', event => {
         .resistance(1) // Set the resistance of the block
         .tagBlock('forge:crushed_netherrack') // Add the block to the 'forge:crushed_netherrack' tag
         .soundType('gravel')
-        .tagBlock('minecraft:mineable/shovels') 
-        .tagBlock('minecraft:needs_wooden_tool') // Add the block to the 'minecraft:needs_wooden_tool' tag
+        .tagBlock('minecraft:mineable/shovel') 
 })
