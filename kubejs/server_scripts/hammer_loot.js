@@ -42,4 +42,12 @@ LootJS.modifiers((event) => {
         .removeLoot('#minecraft:planks')
         .addLoot(Item.of("thermal:sawdust", 2))
 
+    //netherrack = crushed netherrack
+
+    event
+        .addBlockLootModifier('minecraft:netherrack')
+        .matchMainHand('#forge:tools/hammer')
+        .removeLoot('minecraft:netherrack')
+        .addLoot("kubejs:crushed_netherrack")
+
 });
