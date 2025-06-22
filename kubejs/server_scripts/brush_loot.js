@@ -4,7 +4,7 @@ LootJS.modifiers((event) => {
         .addBlockLootModifier('minecraft:gravel')
         .matchMainHand('#forge:tools/brush')
         .removeLoot('minecraft:gravel')
-        .addWeightedLoot([0,2],[
+        .addWeightedLoot([0,1],[
             Item.of('kubejs:iron_ore_chunk').withChance(20),
             Item.of('kubejs:copper_ore_chunk').withChance(10),
             Item.of('kubejs:osmium_ore_chunk').withChance(10),
