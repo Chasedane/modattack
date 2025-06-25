@@ -14,14 +14,16 @@ JEIAddedEvents.registerCategories((event) => {
             jeiHelpers: { guiHelper },
         } = category;
 
-        // Set the title of the category to "Painful Blocks".
-        category.width = 150 //or whatever int
+        // Set the width and height of the category.
+        category.width = 150 
         category.height = 70
         category
-            .title("Hammering")
+            // Set the title of the category.
+            .title("Hammering") 
+            // Set the background of the category to a custom texture.
+            .background(guiHelper.createDrawable("kubejs:textures/gui/hammering.png", 0 , 0, 150, 70))
             // Set the background of the category to a blank 100x50 drawable canvas.
-            .background(guiHelper.createDrawable("kubejs:textures/gui/background.png", 0 , 0, 150, 70))
-            //.background(guiHelper.createBlankDrawable(100, 50))
+            //.background(guiHelper.createBlankDrawable(150, 70))
             // Set the icon of the category to a cactus item.
             .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:stone_hammer")))
             // Set the callback function that will verify if a recipe is a valid recipe for this category.
@@ -68,19 +70,12 @@ global["handleLookup"] = (jeiHelpers, builder, recipe, focuses) => {
         case "block":
             // Add an input slot to the recipe that is 35 pixels from the left and 20 pixels from the top.
             // Name the slot "input" so that if we want to reference it in the draw handler, we can.
-            builder.addSlot("INPUT", 120, 30).addItemStack(Item.of(recipe.data.input)).setSlotName("input");
-            // Add an invisible output slot so that if you look at how the item is made, it shows this recipe.
-            builder.addSlot("OUTPUT", 120, 50).addItemStack(Item.of(recipe.data.name)).setSlotName("output");
+            builder.addSlot("INPUT", 77, 27).addItemStack(Item.of(recipe.data.input)).setSlotName("input");
+            // Add an output slot so that if you look at how the item is made, it shows this recipe.
+            builder.addSlot("OUTPUT", 125, 27).addItemStack(Item.of(recipe.data.name)).setSlotName("output");
             break;
         case "fluid":
-            // Add an input slot to the recipe that is 35 pixels from the left and 20 pixels from the top.
-            // This one is slightly different as we are adding a fluid to the slot instead of an Item.
-            // you can chain these as much as you'd like and add as many different ingredients
-            // as you'd like.
-            builder.addSlot("INPUT", 35, 20).addFluidStack(recipe.data.name, 1000).setSlotName("input");
-            // Add an invisible output slot so that if you look at how the item is made, it shows this recipe.
-            builder.addInvisibleIngredients("OUTPUT").addFluidStack(recipe.data.name, 1000);
-            break;
+            
     }
 };
 
@@ -92,6 +87,13 @@ global["renderPainfulBlocks"] = (jeiHelpers, recipe, recipeSlotsView, guiGraphic
     // the fourth is the y position, the fifth is the width of the text, and I have no clue what the last argument does.
     // Probably z-index if I had to guess.
     //guiGraphics.drawWordWrap(Client.font, Text.of(recipe.data.description), 0, 0, 100, 0);
+    //guiGraphics.drawableBuilder("kubejs:textures/gui/background.png", 0, 0, 64, 64);
+
+   /*const MY_IMAGE = new ResourceLocation("kubejs", recipe.data.input_texture);
+   const HAMMER = new ResourceLocation("kubejs", "textures/gui/hammer.png");
+
+   guiGraphics.blit(MY_IMAGE, 40, 19, 0, 0, 0, 32, 32, 256, 256,);
+   guiGraphics.blit(HAMMER, 20, 19, 0, 0, 32, 32,);*/
 };
 
 // Here we can hook into the JEI recipe registration event to add some recipes to our
@@ -107,11 +109,11 @@ JEIAddedEvents.registerRecipes((event) => {
     event
         .custom("kubejsadditions:hammering")
         .add({ name: "minecraft:gravel", type: "block", input: "minecraft:cobblestone"})
-        .add({ name: "minecraft:sand", type: "item", input: "minecraft:gravel" })
+        .add({ name: "minecraft:sand", type: "block", input: "minecraft:gravel",})
         .add({ name: "kubejs:dust", type: "block", input: "minecraft:sand"})
-        .add({ name: "kubejs:crushed_netherrack", type: "item", input: "minecraft:netherrack" })
-        .add({ name: "thermal:sawdust", type: "item", input: "minecraft:oak_log"})
-        .add({ name: "thermal:sawdust", type: "item", input: "minecraft:oak_planks" })
+        .add({ name: "kubejs:crushed_netherrack", type: "block", input: "minecraft:netherrack" })
+        .add({ name: "thermal:sawdust", type: "block", input: "minecraft:oak_log"})
+        .add({ name: "thermal:sawdust", type: "block", input: "minecraft:oak_planks"})
     // .add([])
     // .add("")
     // .add(true)
@@ -119,20 +121,3 @@ JEIAddedEvents.registerRecipes((event) => {
     // .add(12.4)
     // .add(()=> Item.of('steak'))
 });
-/*
-JEIAddedEvents.registerCategories(event => {
-  const guiHelper = event.JEI_HELPERS.guiHelper;
-  const ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation");
-
-  event.custom("kubejs:testkategorie", category => {
-    category
-      .title("Testkategorie")
-      .background(guiHelper.createDrawable("kubejs:textures/item/background", 0, 0, 149, 175))
-      .icon(guiHelper.createDrawableItemStack(Item.of("minecraft:stone")))
-      .isRecipeHandled(recipe => true)
-      .handleLookup((builder, recipe) => {
-        builder.addSlot(RecipeIngredientRole.INPUT, 10, 20).addItemStack(Item.of("minecraft:iron_ingot"));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 60, 20).addItemStack(Item.of("minecraft:diamond"));
-      });
-  });
-});*/
