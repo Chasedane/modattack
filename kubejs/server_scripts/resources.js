@@ -15,25 +15,10 @@ ServerEvents.recipes(event => {
         '9x kubejs:zinc_ore_chunk'
     ])
 
-    event.shapeless('create:crushed_raw_osmium', [
-        '9x kubejs:osmium_ore_chunk'
-    ])
-
     event.shapeless('create_more_additions:crushed_silver_ore', [
         '9x kubejs:silver_ore_chunk'
     ])
-
-    event.shapeless('create:crushed_raw_tin', [
-        '9x kubejs:tin_ore_chunk'
-    ])
-
-    event.shapeless('create:crushed_raw_lead', [
-        '9x kubejs:lead_ore_chunk'
-    ])
-
-    event.shapeless('create:crushed_raw_nickel', [
-        '9x kubejs:nickel_ore_chunk'
-    ])
+   
 
     event.shapeless('create:crushed_raw_silver', [
         'create_more_additions:crushed_silver_ore'
@@ -53,11 +38,26 @@ ServerEvents.recipes(event => {
 
     event.smelting('create_more_additions:silver_nugget', 'kubejs:silver_ore_chunk')
 
-    event.smelting('mekanism:nugget_osmium', 'kubejs:osmium_ore_chunk')
 
-    event.smelting('thermal:tin_nugget', 'kubejs:tin_ore_chunk')
+    event.remove({ id: 'create:splashing/red_sand' });
+    event.recipes.create.splashing([Item.of('minecraft:dead_bush').withChance(0.05), Item.of('kubejs:gold_ore_chunk', 3).withChance(0.12)], '#minecraft:sand');
 
-    event.smelting('thermal:lead_nugget', 'kubejs:lead_ore_chunk')
+    event.recipes.create.splashing([Item.of('kubejs:silver_ore_chunk').withChance(0.05)], 'kubejs:dust');
 
-    event.smelting('thermal:nickel_nugget', 'kubejs:nickel_ore_chunk')
+    event.recipes.create.crushing([Item.of('create:crushed_raw_tin').withChance(0.1), Item.of('create:crushed_raw_lead').withChance(0.05), Item.of('minecraft:gravel')], 'minecraft:tuff')
+    .processingTime(300)
+
+    event.remove({ id: 'create:crushing/ochrum' });
+    event.remove({ id: 'create:crushing/ochrum_recycling' });
+
+    event.recipes.create.crushing([Item.of('create:crushed_raw_nickel').withChance(0.1), Item.of('create:crushed_raw_osmium').withChance(0.05), Item.of('minecraft:gravel')], 'create:ochrum')
+    .processingTime(300)
+
+    event.recipes.create.mixing('create:ochrum', ['kubejs:dust', 'minecraft:sand', 'minecraft:gravel'])
+
+    event.recipes.create.mixing('minecraft:tuff', [Fluid.of('minecraft:lava',100), 'minecraft:gravel'])
+
+    event.recipes.create.mixing(Fluid.of('minecraft:lava',10), 'kubejs:stone_pebble')
+        .heated()
+
 })
