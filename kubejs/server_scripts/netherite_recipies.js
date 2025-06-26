@@ -52,7 +52,7 @@ event.recipes.create.filling('kubejs:scrap_mold', ['kubejs:dummy_scrap', Fluid.o
 event.recipes.create.mixing('netherite_scrap', ['kubejs:debris_scrap', '#forge:dusts/gold'])
     .heated()
 
-event.recipes.create.milling('thermal:silver_dust', 'thermal:silver_ingot')
+event.recipes.create.milling('thermal:silver_dust', 'create_more_additions:silver_ingot')
 
 event.recipes.create.milling('thermal:gold_dust', 'minecraft:gold_ingot')
 

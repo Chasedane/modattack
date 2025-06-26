@@ -18,15 +18,6 @@ ServerEvents.recipes(event => {
     event.shapeless('create_more_additions:crushed_silver_ore', [
         '9x kubejs:silver_ore_chunk'
     ])
-   
-
-    event.shapeless('create:crushed_raw_silver', [
-        'create_more_additions:crushed_silver_ore'
-    ])
-
-    event.shapeless('create_more_additions:crushed_silver_ore', [
-       'create:crushed_raw_silver'
-    ])
 
     event.smelting('minecraft:iron_nugget', 'kubejs:iron_ore_chunk')
 
