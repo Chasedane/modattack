@@ -121,3 +121,8 @@ JEIAddedEvents.registerRecipes((event) => {
     // .add(12.4)
     // .add(()=> Item.of('steak'))
 });
+
+
+JEIEvents.information(event => {
+  event.addItem('kubejs:creative_block', ['Legends tell, that only the most powerful hammer can shape this block into its final form...'])
+})

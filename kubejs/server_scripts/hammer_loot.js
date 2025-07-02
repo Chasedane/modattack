@@ -50,4 +50,19 @@ LootJS.modifiers((event) => {
         .removeLoot('minecraft:netherrack')
         .addLoot("kubejs:crushed_netherrack")
 
+
+    //creative block = creative blocks
+
+    event
+        .addBlockLootModifier('kubejs:creative_block')
+        .matchMainHand('kubejs:netherite_hammer')
+        .removeLoot('kubejs:creative_block')
+        .addWeightedLoot([
+            Item.of("create:creative_motor").withChance(20),
+            Item.of("create:creative_crate").withChance(15),
+            Item.of("mekanism:creative_energy_cube").withChance(5),
+            Item.of("mekanism:creative_fluid_tank").withChance(20),
+            Item.of("mekanism:creative_chemical_tank").withChance(20),
+        ]);
+
 });
