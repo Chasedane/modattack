@@ -46,3 +46,4 @@ usernamecache.json
 .rcon-cli.env
 run.sh
 whitelist.json
+/config
