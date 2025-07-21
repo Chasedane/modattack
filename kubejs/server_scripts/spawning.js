@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-    event.campfireCooking('minecraft:blaze_spawn_egg', 'botania:blaze_block', 0.3, 20) // 1800 ticks = 90 seconds
+    event.campfireCooking('minecraft:blaze_spawn_egg', 'botania:blaze_block', 0.3, 1800) // 1800 ticks = 90 seconds
 })
 
 ItemEvents.canPickUp('minecraft:blaze_spawn_egg', event => {
