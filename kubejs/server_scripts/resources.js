@@ -38,6 +38,9 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing([Item.of('create:crushed_raw_tin').withChance(0.1), Item.of('create:crushed_raw_lead').withChance(0.05), Item.of('minecraft:gravel')], 'minecraft:tuff')
     .processingTime(300)
 
+    event.recipes.create.compacting('3x minecraft:coal', '4x minecraft:charcoal').heated()
+    event.recipes.create.compacting('minecraft:netherrack', ['3x minecraft:redstone', Fluid.of('minecraft:lava', 1000)]).heated()
+
     event.remove({ id: 'create:crushing/ochrum' });
     event.remove({ id: 'create:crushing/ochrum_recycling' });
 
