@@ -4,10 +4,14 @@
  * @source https://discord.com/channels/303440391124942858/1229177615978594334
  */
 
+let customRecipeType = null
+
 JEIAddedEvents.registerCategories((event) => {
-    // Register a new CustomCategory with the id "kubejsadditions:painful_blocks".
+    // Register a new CustomCategory with the id "kubejsadditions:hammering".
     //const guiHelper = event.JEI_HELPERS.guiHelper;
     event.custom("kubejsadditions:hammering", (category) => {
+
+        customRecipeType = category.recipeType;
 
         const {
             jeiHelpers,
@@ -54,7 +58,8 @@ global["verifyRecipe"] = (jeiHelpers, recipe) => {
     return !!(
         recipe?.data?.name !== undefined &&
         recipe?.data?.type !== undefined &&
-        recipe?.data?.input !== undefined
+        recipe?.data?.input !== undefined &&
+        recipe?.data?.amount !== undefined
     );
 };
 
@@ -70,9 +75,10 @@ global["handleLookup"] = (jeiHelpers, builder, recipe, focuses) => {
         case "block":
             // Add an input slot to the recipe that is 35 pixels from the left and 20 pixels from the top.
             // Name the slot "input" so that if we want to reference it in the draw handler, we can.
-            builder.addSlot("INPUT", 77, 27).addItemStack(Item.of(recipe.data.input)).setSlotName("input");
+            builder.addSlot("INPUT", 77, 27).addIngredients(Ingredient.of(recipe.data.input)).setSlotName("input");
             // Add an output slot so that if you look at how the item is made, it shows this recipe.
-            builder.addSlot("OUTPUT", 125, 27).addItemStack(Item.of(recipe.data.name)).setSlotName("output");
+            builder.addSlot("OUTPUT", 125, 27).addItemStack(Item.of(recipe.data.name, recipe.data.amount)).setSlotName("output");
+           // builder.addRecipeCatalyst("INPUT").addItemStack(Item.of('#forge:tools/hammer'));
             break;
         case "fluid":
             
@@ -108,12 +114,12 @@ JEIAddedEvents.registerRecipes((event) => {
     // Just make sure to update how you render it in the category definition.
     event
         .custom("kubejsadditions:hammering")
-        .add({ name: "minecraft:gravel", type: "block", input: "minecraft:cobblestone"})
-        .add({ name: "minecraft:sand", type: "block", input: "minecraft:gravel",})
-        .add({ name: "kubejs:dust", type: "block", input: "minecraft:sand"})
-        .add({ name: "kubejs:crushed_netherrack", type: "block", input: "minecraft:netherrack" })
-        .add({ name: "thermal:sawdust", type: "block", input: "minecraft:oak_log"})
-        .add({ name: "thermal:sawdust", type: "block", input: "minecraft:oak_planks"})
+        .add({ name: "minecraft:gravel", type: "block", input: "minecraft:cobblestone", amount: 1})
+        .add({ name: "minecraft:sand", type: "block", input: "minecraft:gravel",amount: 1})
+        .add({ name: "kubejs:dust", type: "block", input: "minecraft:sand", amount: 1})
+        .add({ name: "kubejs:crushed_netherrack", type: "block", input: "minecraft:netherrack", amount: 1})
+        .add({ name: "thermal:sawdust", type: "block", input: "#minecraft:logs", amount: 8})
+        .add({ name: "thermal:sawdust", type: "block", input: "#minecraft:planks", amount: 2})
     // .add([])
     // .add("")
     // .add(true)
@@ -121,6 +127,20 @@ JEIAddedEvents.registerRecipes((event) => {
     // .add(12.4)
     // .add(()=> Item.of('steak'))
 });
+
+JEIAddedEvents.registerRecipeCatalysts(jei => {
+//   jei.data.addRecipeCatalyst(Item.of('kubejs:stone_hammer'), customRecipeType)
+
+jei.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](Item.of('kubejs:wooden_hammer'), [customRecipeType])
+jei.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](Item.of('kubejs:stone_hammer'), [customRecipeType])
+jei.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](Item.of('kubejs:iron_hammer'), [customRecipeType])
+jei.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](Item.of('kubejs:golden_hammer'), [customRecipeType])
+jei.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](Item.of('kubejs:diamond_hammer'), [customRecipeType])
+jei.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](Item.of('kubejs:netherite_hammer'), [customRecipeType])
+})
+
+
+
 
 
 JEIEvents.information(event => {
