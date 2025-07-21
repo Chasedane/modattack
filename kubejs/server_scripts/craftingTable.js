@@ -39,4 +39,17 @@ event.shaped('kubejs:resource_brush', // arg 1: output
     C: 'minecraft:stick'
   }
 )
+
+event.shaped('kubejs:wooden_watering_can', // arg 1: output
+  [
+    ' AB',
+    'BCB', // arg 2: the shape (array of strings)
+    ' B '
+  ],
+  {
+    A: 'minecraft:bone_meal', // arg 3: the mapping object
+    B: '#minecraft:planks',  //arg 3: the mapping object
+    C: 'minecraft:bowl'
+  }
+)
 })
