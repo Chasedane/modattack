@@ -40,4 +40,32 @@ ServerEvents.recipes(event => {
 
     //Flowers:
 
+
+    plantmutation('minecraft:poppy', 'minecraft:dandelion', 'minecraft:blue_orchid')
+    plantmutation('minecraft:poppy', 'minecraft:blue_orchid', 'minecraft:allium')
+    plantmutation('minecraft:poppy', 'minecraft:allium', 'minecraft:red_tulip')
+    plantmutation('minecraft:dandelion', 'minecraft:lily_of_the_valley', 'minecraft:azure_bluet')
+    plantmutation('minecraft:dandelion', 'minecraft:blue_orchid', 'minecraft:oxeye_daisy')
+    plantmutation('minecraft:dandelion', 'minecraft:oxeye_daisy', 'minecraft:white_tulip')
+    plantmutation('minecraft:blue_orchid', 'minecraft:lily_of_the_valley', 'minecraft:cornflower')
+    plantmutation('minecraft:blue_orchid', 'minecraft:oxeye_daisy', 'minecraft:orange_tulip')
+    plantmutation('minecraft:cornflower', 'minecraft:red_tulip', 'minecraft:torchflower')
+    plantmutation('minecraft:white_tulip', 'minecraft:oxeye_daisy', 'minecraft:lily_of_the_valley')
+
+
+    //Saplings:
+
+    plantmutation('minecraft:oak_sapling', 'minecraft:spruce_sapling', 'minecraft:dark_oak_sapling')
+    plantmutation('minecraft:oak_sapling', 'minecraft:oxeye_daisy', 'minecraft:birch_sapling')
+    plantmutation('minecraft:oak_sapling', 'minecraft:birch_sapling', 'minecraft:spruce_sapling')
+    plantmutation('minecraft:spruce_sapling', 'minecraft:cherry_sapling', 'minecraft:jungle_sapling')
+    plantmutation('minecraft:birch_sapling', 'minecraft:cherry_sapling', 'minecraft:acacia_sapling')
+    plantmutation('minecraft:dark_oak_sapling', 'minecraft:acacia_sapling', 'minecraft:mangrove_propagule')
+    plantmutation('minecraft:oak_sapling', 'minecraft:slime_block', 'tconstruct:earth_slime_sapling')
+    plantmutation('tconstruct:earth_slime_sapling', 'minecraft:oak_sapling', 'tconstruct:sky_slime_sapling')
+
+    //Misc:
+
+    plantmutation('minecraft:grass', 'minecraft:grass', 'minecraft:tall_grass')
+
 })
