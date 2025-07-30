@@ -41,4 +41,9 @@ ServerEvents.recipes(event => {
     P:'#forge:ingots/steel',
     Q:'#forge:ingots/steel'
   })
+
+  event.remove({id: 'create_ad_astra_recipes:tier_1'});
+  event.remove({id: 'create_ad_astra_recipes:tier_2'});
+  event.remove({id: 'create_ad_astra_recipes:tier_3'});
+  event.remove({id: 'create_ad_astra_recipes:tier_4'});
 })
