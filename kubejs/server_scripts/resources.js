@@ -39,7 +39,11 @@ ServerEvents.recipes(event => {
     .processingTime(300)
 
     event.recipes.create.compacting('3x minecraft:coal', '4x minecraft:charcoal').heated()
-    event.recipes.create.compacting('minecraft:netherrack', ['3x minecraft:redstone', Fluid.of('minecraft:lava', 1000)]).heated()
+    event.recipes.create.compacting('minecraft:netherrack', ['7x minecraft:redstone', Fluid.of('minecraft:lava', 1000)])
+
+    event.recipes.create.compacting('4x minecraft:raw_iron', '4x create:crushed_raw_iron')
+
+    event.recipes.create.compacting('minecraft:blaze_rod', '9x minecraft:blaze_powder')
 
     event.remove({ id: 'create:crushing/ochrum' });
     event.remove({ id: 'create:crushing/ochrum_recycling' });
@@ -54,4 +58,5 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing(Fluid.of('minecraft:lava',10), 'kubejs:stone_pebble')
         .heated()
 
+    event.recipes.create.mixing('minecraft:amethyst_shard', ['minecraft:calcite', 'minecraft:purple_dye', Fluid.of('tconstruct:molten_quartz', 100)]).superheated();
 })
