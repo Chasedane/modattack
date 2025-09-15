@@ -27,6 +27,18 @@ event.shaped('minecraft:cobblestone', [
 ], { A: 'kubejs:stone_pebble' 
 });
 
+event.shaped('minecraft:granite', [
+    'AA',
+    'AA'
+], { A: 'kubejs:granite_pebble' 
+});
+
+event.shaped('minecraft:calcite', [
+    'AA',
+    'AA'
+], { A: 'kubejs:calcite_pebble' 
+});
+
 event.shaped('kubejs:resource_brush', // arg 1: output
   [
     ' BB',

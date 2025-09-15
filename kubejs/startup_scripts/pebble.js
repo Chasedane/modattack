@@ -4,4 +4,14 @@ StartupEvents.registry('item', event => {
     .displayName('Stone Pebble')
     .tag('forge:pebbles')
     .color(0x808080)
+  
+  event.create('granite_pebble')
+    .displayName('Granite Pebble')
+    .tag('forge:pebbles')
+    .color(0x808080)
+
+  event.create('calcite_pebble')
+    .displayName('Calcite Pebble')
+    .tag('forge:pebbles')
+    .color(0x808080)
 })

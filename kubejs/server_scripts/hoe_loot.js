@@ -10,7 +10,9 @@ LootJS.modifiers((event) => {
         .removeLoot('minecraft:dirt')
         .addWeightedLoot(
             [0, 3],
-            [Item.of("kubejs:stone_pebble").withChance(10), Item.of('#minecraft:saplings').withChance(1)]
+            [Item.of("kubejs:stone_pebble").withChance(10), 
+                Item.of('#minecraft:saplings').withChance(1),
+                Item.of("kubejs:granite_pebble").withChance(10)]
     )
 
     //leaves = 1 string 

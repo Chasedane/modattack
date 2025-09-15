@@ -58,5 +58,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing(Fluid.of('minecraft:lava',10), 'kubejs:stone_pebble')
         .heated()
 
-    event.recipes.create.mixing('minecraft:amethyst_shard', ['minecraft:calcite', 'minecraft:purple_dye', Fluid.of('tconstruct:molten_quartz', 100)]).superheated();
+    event.recipes.create.mixing('minecraft:amethyst_shard', ['kubejs:calcite_pebble', 'minecraft:purple_dye', Fluid.of('tconstruct:molten_quartz', 100)]).superheated();
+    event.recipes.create.compacting('ae2:certus_quartz_crystal', ['4x minecraft:quartz', 'minecraft:amethyst_shard']).superheated();
 })
